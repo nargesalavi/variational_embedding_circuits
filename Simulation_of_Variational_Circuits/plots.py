@@ -53,8 +53,95 @@ def plot_axes_IdVsCost():
 	plt.xlabel("Circuit ID", fontsize=13)
 	plt.ylabel("Cost Function After 300 Steps", fontsize=13)
 	plt.show()
+##___________________________________STEPS_______________________________
+approx_converge_step = np.full((4,4,2,8), np.nan)
+# After 300 steps
+approx_converge_step[0,1,0,0]=np.nan
+approx_converge_step[0,1,0,1]=np.nan
+approx_converge_step[0,1,0,2]=175
+approx_converge_step[0,1,0,3]=300
+approx_converge_step[0,1,0,4]=0
+approx_converge_step[0,1,0,5]=np.nan
+approx_converge_step[0,1,0,6]=300
+approx_converge_step[0,1,0,7]=300
 
+approx_converge_step[1,1,0,0]=np.nan
+approx_converge_step[1,1,0,1]=160
+approx_converge_step[1,1,0,2]=200
+approx_converge_step[1,1,0,3]=175
+approx_converge_step[1,1,0,4]=0
+approx_converge_step[1,1,0,5]=np.nan
+approx_converge_step[1,1,0,6]=80
+approx_converge_step[1,1,0,7]=np.nan
 
+approx_converge_step[3,1,0,0]=np.nan
+approx_converge_step[3,1,0,1]=np.nan
+approx_converge_step[3,1,0,2]=110
+approx_converge_step[3,1,0,3]=300
+approx_converge_step[3,1,0,4]=300
+approx_converge_step[3,1,0,5]=np.nan
+approx_converge_step[3,1,0,6]=300
+approx_converge_step[3,1,0,7]=300
+
+##___________________________________TIME PER 5 STEPS_______________________________
+fivestep_update_time = np.full((4,4,2,8), np.nan)
+# After 300 steps
+fivestep_update_time[0,1,0,0]=np.nan
+fivestep_update_time[0,1,0,1]=14.96
+fivestep_update_time[0,1,0,2]=16.543
+fivestep_update_time[0,1,0,3]=15.94
+fivestep_update_time[0,1,0,4]=11.25
+fivestep_update_time[0,1,0,5]=np.nan
+fivestep_update_time[0,1,0,6]=21.89
+fivestep_update_time[0,1,0,7]=25.34
+
+fivestep_update_time[1,1,0,0]=np.nan
+fivestep_update_time[1,1,0,1]=24.41
+fivestep_update_time[1,1,0,2]=26.04
+fivestep_update_time[1,1,0,3]=26.68
+fivestep_update_time[1,1,0,4]=17.51
+fivestep_update_time[1,1,0,5]=np.nan
+fivestep_update_time[1,1,0,6]=56.018
+fivestep_update_time[1,1,0,7]=np.nan
+
+fivestep_update_time[3,1,0,0]=np.nan
+fivestep_update_time[3,1,0,1]=50.78
+fivestep_update_time[3,1,0,2]=55.26
+fivestep_update_time[3,1,0,3]=57.33
+fivestep_update_time[3,1,0,4]=31.61
+fivestep_update_time[3,1,0,5]=np.nan
+fivestep_update_time[3,1,0,6]=130.63
+fivestep_update_time[3,1,0,7]=116.30
+##___________________________________TOTAL TIME_______________________________
+training_time = np.full((4,4,2,8), np.nan)
+# After 300 steps
+training_time[0,1,0,0]=479.893336#
+training_time[0,1,0,1]=424.379621#
+training_time[0,1,0,2]=552.828450# after 175 steps
+training_time[0,1,0,3]=965.051553 
+training_time[0,1,0,4]=0
+training_time[0,1,0,5]=np.nan
+training_time[0,1,0,6]=1308.199168
+training_time[0,1,0,7]=1351.358161
+
+training_time[1,1,0,0]=1872.696054
+training_time[1,1,0,1]=1487.197906
+training_time[1,1,0,2]=1591.101
+training_time[1,1,0,3]=943.339462
+training_time[1,1,0,4]=0
+training_time[1,1,0,5]=np.nan
+training_time[1,1,0,6]=747.091625
+training_time[1,1,0,7]=np.nan
+
+training_time[3,1,0,0]=3055.916249
+training_time[3,1,0,1]=3080.904062
+training_time[3,1,0,2]=np.nan
+training_time[3,1,0,3]=3439.92
+training_time[3,1,0,4]=1939.353908 
+training_time[3,1,0,5]=np.nan
+training_time[3,1,0,6]=7553.474435
+training_time[3,1,0,7]=7085.843876
+##___________________________________COST VALUE_______________________________
 
 #L,Nq,d,ID
 data = np.full((4,4,2,8), np.nan)
@@ -71,32 +158,32 @@ data[3,0,0,1]=0.103657
 data[3,0,0,2]=0.312526
 
 
-data[0,1,0,0]=np.nan
-data[0,1,0,1]=np.nan
-data[0,1,0,2]=np.nan
-data[0,1,0,3]=np.nan
-data[0,1,0,4]=np.nan
+data[0,1,0,0]=0.206598
+data[0,1,0,1]=0.206618
+data[0,1,0,2]=0.206598
+data[0,1,0,3]=0.212872
+data[0,1,0,4]=0.194002
 data[0,1,0,5]=np.nan
-data[0,1,0,6]=np.nan
-data[0,1,0,7]=np.nan
+data[0,1,0,6]=0.206598
+data[0,1,0,7]=0.233291 #Not converged
 
-data[1,1,0,0]=np.nan
-data[1,1,0,1]=np.nan
-data[1,1,0,2]=np.nan
-data[1,1,0,3]=np.nan
-data[1,1,0,4]=np.nan
+data[1,1,0,0]=0.366964
+data[1,1,0,1]=0.380871
+data[1,1,0,2]=0.193271
+data[1,1,0,3]=0.266394 #Afer 175 steps.  0.293327 After 300 steps
+data[1,1,0,4]=0.390337
 data[1,1,0,5]=np.nan
-data[1,1,0,6]=np.nan
+data[1,1,0,6]=0.289328 #minima after 80 steps,  -- cst 0.342832 -- time 2870.083996 300
 data[1,1,0,7]=np.nan
 
-data[3,1,0,0]=np.nan
-data[3,1,0,1]=np.nan
-data[3,1,0,2]=0.375075
-data[3,1,0,3]=0.325434
-data[3,1,0,4]=np.nan
+data[3,1,0,0]=0.338612
+data[3,1,0,1]=0.233918
+data[3,1,0,2]=0.197039  #0.375075prev. Second trial, 0.325200 after 300 steps but 0.197039 after 110 
+data[3,1,0,3]=0.396029
+data[3,1,0,4]=0.362994
 data[3,1,0,5]=np.nan
-data[3,1,0,6]=0.398591
-data[3,1,0,7]=0.660803
+data[3,1,0,6]=0.216178
+data[3,1,0,7]=0.308557
 
 data[0,3,1,4]=0.748411
 
@@ -135,29 +222,29 @@ def define_plot_legend(x_Axis,L=None,Nq=None,data_length=None,ID=None):
 			facecolors='none'
 	elif x_Axis=='L':
 		if ID==0:
-			marker='^'
-		elif ID==1:
-			marker='o'
-		elif ID==2:
-			marker='+'
-		elif ID==3:
-			marker='s'
-		elif ID==4:
-			marker="D"
-		elif ID==5:
-			marker="p"
-		elif ID==6:
-			marker="d"
-		elif ID==7:
-			marker="v"
-		if Nq==0:
 			edgecolors='purple'
-		elif Nq==1:
+		elif ID==1:
 			edgecolors='green'
-		elif Nq==2:
+		elif ID==2:
 			edgecolors='red'
-		else:
+		elif ID==3:
 			edgecolors='blue'
+		elif ID==4:
+			edgecolors="gold"
+		elif ID==5:
+			edgecolors="orange"
+		elif ID==6:
+			edgecolors="aqua"
+		elif ID==7:
+			edgecolors="magenta"
+		if Nq==0:
+			marker='^'
+		elif Nq==1:
+			marker='o'
+		elif Nq==2:
+			marker='+'
+		else:
+			marker='s'
 		if data_length==0:
 			facecolors=edgecolors
 		else:
@@ -202,7 +289,7 @@ def define_plot_legend(x_Axis,L=None,Nq=None,data_length=None,ID=None):
 
 
 
-def plotting(data,x_Axis,draw_line=False):
+def plotting(data,x_Axis,y_label, draw_line=False):
 	L = len(data)
 	Nq = len(data[0])
 	data_length = len(data[0][0])
@@ -263,14 +350,18 @@ def plotting(data,x_Axis,draw_line=False):
 					plt.xlabel("Number of Layers", fontsize=13)
 					
 	plt.legend(bbox_to_anchor=(1.001, 1), loc='upper left')
-	plt.ylabel("Cost Function After 300 Steps", fontsize=13)				
+	plt.ylabel(y_label, fontsize=13)				
 	plt.grid(b=True, which='both', color='#666666', linestyle='--')				
 	plt.show()
 
 #plotting(data)
 
 
-plotting(data,x_Axis='ID')
+#plotting(data,x_Axis='ID')
+#plotting(data,x_Axis="L",y_label="Cost Function After 300 Steps",draw_line=True)
+#plotting(fivestep_update_time,x_Axis="L",y_label="Time of 5 steps of training",draw_line=True)
+plotting(training_time,x_Axis="L",y_label="Training Time",draw_line=True)
+
 #print(data[1,3,0,:])
 
 	
